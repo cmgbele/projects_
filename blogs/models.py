@@ -59,7 +59,7 @@ class Blog(AbstractBaseUser):
     is_superuser = models.BooleanField(_('superuser'), default=False)
     is_active = models.BooleanField(_('active'), default=False)
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['phone']
+    REQUIRED_FIELDS = ['message'] 
     def __str__(self) -> str:
         return self.message 
 
