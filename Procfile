@@ -1,3 +1,2 @@
-web: gunicorn myapp:app --log-file=-
-web: gunicorn-b "0.0.0.0:$PORT" -W 3 blog_api.wsgi 
+web: gunicorn -b "0.0.0.0:$PORT" -w 3 the_blog.wsgi  
 release: python manage.py migrate
